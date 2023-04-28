@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatting Forum</title>
+    <link rel="stylesheet" href="/src/main/resources/com/example/test1/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="chatting_box">
+        <div id="container_3">
+            <div class="profile"><img src="/src/main/resources/com/example/test1/Doctor_icon.PNG" onclick="pfp_open()"><span onclick="pfp_open()">Profile</span></div>
+            <div id="pfp" class="profile_closed">
+                <div class="upper_pfp_area"></div>
+                <span  id="arrow_span0" class="arrow_span0" onclick="pfp_open()"><img src="/src/main/resources/com/example/test1/Arrow_icon.png" alt="" id="arrow" class="old_arrow"><p>Back</p></span>
+                <div id="pfp_zoom" class="pfp_zoom">
+                    <img src="/src/main/resources/com/example/test1/Person_icon.PNG" alt="">
+                    <input type="file" id="upload" hidden/>
+                    <label class="upload" for="upload"><p>Change Pic</p></label>
+                </div>
+            </div>
+            <div id="user_select">
+                <div class="ppl" onclick="item_1()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 1</span></div>
+                <div class="ppl" onclick="item_2()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 2</span></div>
+                <div class="ppl" onclick="item_3()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 3</span></div>
+                <div class="ppl" onclick="item_4()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 4</span></div>
+                <div class="ppl" onclick="item_5()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 5</span></div>
+                <div class="ppl" onclick="item_6()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 6</span></div>
+                <div class="ppl" onclick="item_7()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 7</span></div>
+                <div class="ppl" onclick="item_8()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 8</span></div>
+                <div class="ppl" onclick="item_9()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 9</span></div>
+                <div class="ppl" onclick="item_10()"><img src="/src/main/resources/com/example/test1/Person_icon.PNG"><span>Patient 10</span></div>
+            </div>
+            <input type="radio" name="users" id="item-1" checked />
+            <input type="radio" name="users" id="item-2" />
+            <input type="radio" name="users" id="item-3" />
+            <input type="radio" name="users" id="item-4" />
+            <input type="radio" name="users" id="item-5" />
+            <input type="radio" name="users" id="item-6" />
+            <input type="radio" name="users" id="item-7" />
+            <input type="radio" name="users" id="item-8" />
+            <input type="radio" name="users" id="item-9" />
+            <input type="radio" name="users" id="item-10" />
+            <div class="cards">
+                
+                <input type="file" id="upload" hidden/>
+                <label class="upload" for="upload"><img src="/src/main/resources/com/example/test1/Clip_icon.png" alt=""></label>
+                <label class="card_" for="item-1" id="user-1">
+                    <div class="user_card user1">
+                        <div class="notes-container1">
+                            <ul id="ul1"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-2" id="user-2">
+                    <div class="user_card user2">
+                        <div class="notes-container2">
+                            <ul id="ul2"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-3" id="user-3">
+                    <div class="user_card user3">
+                        <div class="notes-container3">
+                            <ul id="ul3"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-4" id="user-4">
+                    <div class="user_card user4">
+                        <div class="notes-container4">
+                            <ul id="ul4"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-5" id="user-5">
+                    <div class="user_card user5">
+                        <div class="notes-container5">
+                            <ul id="ul5"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-6" id="user-6">
+                    <div class="user_card user6">
+                        <div class="notes-container6">
+                            <ul id="ul6"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-7" id="user-7">
+                    <div class="user_card user7">
+                        <div class="notes-container7">
+                            <ul id="ul7"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-8" id="user-8">
+                    <div class="user_card user8">
+                        <div class="notes-container8">
+                            <ul id="ul8"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-9" id="user-9">
+                    <div class="user_card user9">
+                        <div class="notes-container9">
+                            <ul id="ul9"></ul>
+                        </div>
+                    </div>
+                </label>
+                <label class="card_" for="item-10" id="user-10">
+                    <div class="user_card user10">
+                        <div class="notes-container10">
+                            <ul id="ul10"></ul>
+                        </div>
+                    </div>
+                </label>
+                <div style="position: relative">
+                    <div class="form-container1">
+                        <form class="form_1" id="form_1">
+                            <input type="text" id="title1" placeholder="Type a message" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send1"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_11" id="form_11">
+                            <input type="text" id="title11" placeholder="doc1" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send11"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container2">
+                        <form class="form_2" id="form_2">
+                            <input type="text" id="title2" placeholder="2nd bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send2"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_22" id="form_22">
+                            <input type="text" id="title22" placeholder="doc22" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send22"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container3">
+                        <form class="form_3" id="form_3">
+                            <input type="text" id="title3" placeholder="3rd bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send3"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_33" id="form_33">
+                            <input type="text" id="title33" placeholder="doc33" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send33"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container4">
+                        <form class="form_4" id="form_4">
+                            <input type="text" id="title4" placeholder="4th bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send4"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_44" id="form_44">
+                            <input type="text" id="title44" placeholder="doc44" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send44"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container5">
+                        <form class="form_5" id="form_5">
+                            <input type="text" id="title5" placeholder="5th bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send5"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_55" id="form_55">
+                            <input type="text" id="title55" placeholder="doc55" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send55"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container6">
+                        <form class="form_6" id="form_6">
+                            <input type="text" id="title6" placeholder="6th bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send6"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_66" id="form_66">
+                            <input type="text" id="title66" placeholder="doc66" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send66"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container7">
+                        <form class="form_7" id="form_7">
+                            <input type="text" id="title7" placeholder="7th bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send7"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_77" id="form_77">
+                            <input type="text" id="title77" placeholder="doc77" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send77"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container8">
+                        <form class="form_8" id="form_8">
+                            <input type="text" id="title8" placeholder="8th bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send8"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_88" id="form_88">
+                            <input type="text" id="title88" placeholder="doc88" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send88"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container9">
+                        <form class="form_9" id="form_9">
+                            <input type="text" id="title9" placeholder="9th bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send9"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_99" id="form_99">
+                            <input type="text" id="title99" placeholder="doc99" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send99"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                    <div class="form-container10">
+                        <form class="form_10" id="form_10">
+                            <input type="text" id="title10" placeholder="10th bar" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send10"><img src="/src/main/resources/com/example/test1/Send_icon.png" alt=""></button>
+                        </form>
+                        <!-- <form class="form_1010" id="form_1010">
+                            <input type="text" id="title1010" placeholder="doc1010" />
+                            <input type="text" id="date" />
+                            <button type="submit" id="send1010"><img src="/Pics/Send_icon.png" alt=""></button>
+                        </form> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/src/main/resources/com/example/test1/index.js"></script>
+
+</body>
+
+</html>

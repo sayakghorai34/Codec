@@ -1,0 +1,404 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(146, 234, 193);
+    display: flex;
+    justify-content: center;
+}
+
+#chatting_box {
+    height: 95%;
+    width: 97%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#container_3 {
+    background-color: rgb(240, 229, 229);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#user_select {
+    background-color: rgb(204, 204, 204);
+    position: relative;
+    top: 21.5%;
+    height: 78.5%;
+    width: 30%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.cards {
+    height: 100%;
+    width: 70%;
+}
+
+#item-1:checked~.cards>label .user1,
+#item-2:checked~.cards>label .user2,
+#item-3:checked~.cards>label .user3,
+#item-4:checked~.cards>label .user4,
+#item-5:checked~.cards>label .user5,
+#item-6:checked~.cards>label .user6,
+#item-7:checked~.cards>label .user7,
+#item-8:checked~.cards>label .user8,
+#item-9:checked~.cards>label .user9,
+#item-10:checked~.cards>label .user10 {
+    height: 100%;
+    width: 100%;
+}
+
+ul{
+    margin: 0;
+}
+.yui>li:nth-child(2), .yui>li:nth-child(4), .yui>li:nth-child(6){
+    position: relative;
+    margin-left: auto;
+    margin-right: 60px;
+}
+
+.profile {
+    position: absolute;
+    height: 150px;
+    width: 30%;
+    z-index: 90;
+    background-color: #68e0c86d;
+}
+.profile > img{
+    height:90px;
+    width: 90px;
+    border-radius: 50%;
+    position: relative;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.profile>span {
+    position: relative;
+    top: 33%;
+    left: 22%;
+    font-size: 25px;
+    cursor: pointer;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.profile_closed {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(208, 255, 208);
+    transition: width .3s;
+    overflow: hidden;
+    z-index: 190;
+}
+.old_arrow, .arrow {
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 14.5%;
+    transform: translateX(100%);
+    transition: all 0.6s;
+}
+.arrow {
+    display: block;
+    cursor: pointer;
+    z-index: 99;
+}
+.profile_closed > .arrow_span > p {
+    font-size: 20px;
+    position: absolute;
+    transform: translate(140%, 300%);
+}
+.profile_closed > .arrow_span {
+    position: relative;
+    left: 0%;
+    transition: all 0.6s;
+    cursor: pointer;    
+}
+.arrow_span0{
+    position: relative;
+    top: 90.8%;
+    left: -2.5%;
+}
+.profile_closed > .arrow_span:hover {
+    position: relative;
+    left: -2.5%;
+    transition: all 0.6s;
+}
+.profile_open {
+    transition: width .3s;
+    width: 30%;
+}
+.upper_pfp_area {
+    position: absolute;
+    width: 100%;
+    height: 158px;
+    background-color: rgb(203, 255, 246);
+}
+.pfp_zoom {
+    position: absolute;
+    border-radius: 50%;
+    top: 40%;
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    background-color: rgba(184, 151, 151, 0.826);
+    transform: scale(0);
+    transition: scale 0.8;
+}
+.pfp_zoom >img{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    opacity: .7;
+    transform: scale(0);
+    transition: scale 0.8s;
+}
+.pfp_zoom > label > p{
+    position: absolute;
+    border-radius: 50%;
+    top: 40%;
+    left: 16%;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.pfp_zoom:hover > label > p{
+    display: block;
+}
+.pfp_zoom:hover {
+    background-color: black;
+}
+.pfp_zoom1 {
+    transform: scale(1);
+    transition: all 0.8s;
+}
+.pfp_zoom1 > img {
+    transform: scale(1);
+    transition: all 0.8s;
+}
+.ppl {
+    background-color: rgba(255, 255, 255, 0.676);
+    margin: 0 0 2px 0;
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+}
+.ppl2 {
+    background-color: red;
+    margin: 0 0 2px 0;
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+}
+.ppl:hover {
+    background-color: rgba(255, 255, 255, 0.242);
+}
+.ppl:active {
+    background-color: rgba(0, 0, 0, 0.205);
+}
+.ppl:focus {
+    background-color: red;
+}
+.ppl > img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+.ppl > span {
+    position: relative;
+    left: 10%;
+    top: -20%;
+    font-size: 20px;
+}
+.user_card {
+    position: relative;
+}
+
+
+[class*="notes-container"] {
+    width: 100%;
+    height: 91%;
+    overflow-y: auto;
+    background-color: #f0e5e5;
+}
+[class*="notes-container"]>ul>li {
+    position: relative;
+    list-style: none;
+    background-color: #fff;
+    min-height: 70px;
+    min-height: 30px;
+    min-width: 100px;
+    max-width: 600px;
+    margin: 30px;
+    border-radius: 4px;
+    display: table;
+}
+[class*="notes-container"]>.yui>li:nth-child(2), [class*="notes-container"]>.yui>li:nth-child(4), [class*="notes-container"]>.yui>li:nth-child(6) {
+    background-color: #c6fdbd;
+}
+h6 {
+    float: right;
+}
+
+h6,
+p,
+caption {
+    margin: 6px 10px 5px 8px;
+    position: relative;
+    width: auto;
+}
+
+h6 {
+    margin-bottom: 5px;
+}
+
+[class*="form_"] {
+    position: relative;
+    bottom: 0;
+    transform: translateY(-100%);
+}
+.form_1, .form_2, .form_3, .form_4, .form_5, .form_6, .form_7, .form_8, .form_9, .form_10 {
+    background-color: rgb(108, 189, 173);
+
+}
+[id*="title"] {
+    position: relative;
+    min-width: 85%;
+    max-width: 85.5%;
+    left: 7%;
+    padding: 9px 12px 11px;
+    margin: 14px 10px;
+    border: 1px solid var(--compose-input-border);
+    border-radius: 8px;
+    font-size: 15px;
+}
+#date {
+    display: none;
+    opacity: 0;
+    scale: 0;
+}
+
+[id*="send"] {
+    position: absolute;
+    top: 10%;
+    left: 93.5%;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+}
+[id*="send"] > img {
+    width: 40px;
+    transform: rotate(5deg);
+}
+#item-1:checked~.cards>label~div>.form-container2, #item-1:checked~.cards>label~div>.form-container3, #item-1:checked~.cards>label~div>.form-container4, #item-1:checked~.cards>label~div>.form-container5, #item-1:checked~.cards>label~div>.form-container6, #item-1:checked~.cards>label~div>.form-container7, #item-1:checked~.cards>label~div>.form-container8, #item-1:checked~.cards>label~div>.form-container9, #item-1:checked~.cards>label~div>.form-container10, #item-1:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-2:checked~.cards>label~div>.form-container1, #item-2:checked~.cards>label~div>.form-container3, #item-2:checked~.cards>label~div>.form-container4, #item-2:checked~.cards>label~div>.form-container5, #item-2:checked~.cards>label~div>.form-container6, #item-2:checked~.cards>label~div>.form-container7, #item-2:checked~.cards>label~div>.form-container8, #item-2:checked~.cards>label~div>.form-container9, #item-2:checked~.cards>label~div>.form-container10, #item-2:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-3:checked~.cards>label~div>.form-container1, #item-3:checked~.cards>label~div>.form-container2, #item-3:checked~.cards>label~div>.form-container4, #item-3:checked~.cards>label~div>.form-container5, #item-3:checked~.cards>label~div>.form-container6, #item-3:checked~.cards>label~div>.form-container7, #item-3:checked~.cards>label~div>.form-container8, #item-3:checked~.cards>label~div>.form-container9, #item-3:checked~.cards>label~div>.form-container10, #item-3:checked~.cards>label~div>.form-containerdoctor{
+    display: none;
+}
+#item-4:checked~.cards>label~div>.form-container1, #item-4:checked~.cards>label~div>.form-container2, #item-4:checked~.cards>label~div>.form-container3, #item-4:checked~.cards>label~div>.form-container5, #item-4:checked~.cards>label~div>.form-container6, #item-4:checked~.cards>label~div>.form-container7, #item-4:checked~.cards>label~div>.form-container8, #item-4:checked~.cards>label~div>.form-container9, #item-4:checked~.cards>label~div>.form-container10, #item-4:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-5:checked~.cards>label~div>.form-container1, #item-5:checked~.cards>label~div>.form-container2, #item-5:checked~.cards>label~div>.form-container3, #item-5:checked~.cards>label~div>.form-container4, #item-5:checked~.cards>label~div>.form-container6, #item-5:checked~.cards>label~div>.form-container7, #item-5:checked~.cards>label~div>.form-container8, #item-5:checked~.cards>label~div>.form-container9, #item-5:checked~.cards>label~div>.form-container10, #item-5:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-6:checked~.cards>label~div>.form-container1, #item-6:checked~.cards>label~div>.form-container2, #item-6:checked~.cards>label~div>.form-container3, #item-6:checked~.cards>label~div>.form-container4, #item-6:checked~.cards>label~div>.form-container5, #item-6:checked~.cards>label~div>.form-container7, #item-6:checked~.cards>label~div>.form-container8, #item-6:checked~.cards>label~div>.form-container9, #item-6:checked~.cards>label~div>.form-container10, #item-6:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-7:checked~.cards>label~div>.form-container1, #item-7:checked~.cards>label~div>.form-container2, #item-7:checked~.cards>label~div>.form-container3, #item-7:checked~.cards>label~div>.form-container4, #item-7:checked~.cards>label~div>.form-container5, #item-7:checked~.cards>label~div>.form-container6, #item-7:checked~.cards>label~div>.form-container8, #item-7:checked~.cards>label~div>.form-container9, #item-7:checked~.cards>label~div>.form-container10, #item-7:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-8:checked~.cards>label~div>.form-container1, #item-8:checked~.cards>label~div>.form-container2, #item-8:checked~.cards>label~div>.form-container3, #item-8:checked~.cards>label~div>.form-container4, #item-8:checked~.cards>label~div>.form-container5, #item-8:checked~.cards>label~div>.form-container6, #item-8:checked~.cards>label~div>.form-container7, #item-8:checked~.cards>label~div>.form-container9, #item-8:checked~.cards>label~div>.form-container10, #item-8:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-9:checked~.cards>label~div>.form-container1, #item-9:checked~.cards>label~div>.form-container2, #item-9:checked~.cards>label~div>.form-container3, #item-9:checked~.cards>label~div>.form-container4, #item-9:checked~.cards>label~div>.form-container5, #item-9:checked~.cards>label~div>.form-container6, #item-9:checked~.cards>label~div>.form-container7, #item-9:checked~.cards>label~div>.form-container8, #item-9:checked~.cards>label~div>.form-container10, #item-9:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-10:checked~.cards>label~div>.form-container1, #item-10:checked~.cards>label~div>.form-container2, #item-10:checked~.cards>label~div>.form-container3, #item-10:checked~.cards>label~div>.form-container4, #item-10:checked~.cards>label~div>.form-container5, #item-10:checked~.cards>label~div>.form-container6, #item-10:checked~.cards>label~div>.form-container7, #item-10:checked~.cards>label~div>.form-container8, #item-10:checked~.cards>label~div>.form-container9, #item-10:checked~.cards>label~div>.form-containerdoctor {
+    display: none;
+}
+#item-doctor:checked~.cards>label~div>.form-container1, #item-doctor:checked~.cards>label~div>.form-container2, #item-doctor:checked~.cards>label~div>.form-container3, #item-doctor:checked~.cards>label~div>.form-container4, #item-doctor:checked~.cards>label~div>.form-container5, #item-doctor:checked~.cards>label~div>.form-container6, #item-doctor:checked~.cards>label~div>.form-container7, #item-doctor:checked~.cards>label~div>.form-container8, #item-doctor:checked~.cards>label~div>.form-container9, #item-doctor:checked~.cards>label~div>.form-container10 {
+    display: none;
+}
+
+
+#item-1:checked~.cards>label>div>.notes-container2, #item-1:checked~.cards>label>div>.notes-container3, #item-1:checked~.cards>label>div>.notes-container4, #item-1:checked~.cards>label>div>.notes-container5, #item-1:checked~.cards>label>div>.notes-container6, #item-1:checked~.cards>label>div>.notes-container7, #item-1:checked~.cards>label>div>.notes-container8, #item-1:checked~.cards>label>div>.notes-container9, #item-1:checked~.cards>label>div>.notes-container10, #item-1:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);
+}
+#item-2:checked~.cards>label>div>.notes-container1, #item-2:checked~.cards>label>div>.notes-container3, #item-2:checked~.cards>label>div>.notes-container4, #item-2:checked~.cards>label>div>.notes-container5, #item-2:checked~.cards>label>div>.notes-container6, #item-2:checked~.cards>label>div>.notes-container7, #item-2:checked~.cards>label>div>.notes-container8, #item-2:checked~.cards>label>div>.notes-container9, #item-2:checked~.cards>label>div>.notes-container10, #item-2:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);
+}
+#item-3:checked~.cards>label>div>.notes-container1, #item-3:checked~.cards>label>div>.notes-container2, #item-3:checked~.cards>label>div>.notes-container4, #item-3:checked~.cards>label>div>.notes-container5, #item-3:checked~.cards>label>div>.notes-container6, #item-3:checked~.cards>label>div>.notes-container7, #item-3:checked~.cards>label>div>.notes-container8, #item-3:checked~.cards>label>div>.notes-container9, #item-3:checked~.cards>label>div>.notes-container10, #item-3:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);  
+}
+#item-4:checked~.cards>label>div>.notes-container1, #item-4:checked~.cards>label>div>.notes-container2, #item-4:checked~.cards>label>div>.notes-container3, #item-4:checked~.cards>label>div>.notes-container5, #item-4:checked~.cards>label>div>.notes-container6, #item-4:checked~.cards>label>div>.notes-container7, #item-4:checked~.cards>label>div>.notes-container8, #item-4:checked~.cards>label>div>.notes-container9, #item-4:checked~.cards>label>div>.notes-container10, #item-4:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);      
+}
+#item-5:checked~.cards>label>div>.notes-container1, #item-5:checked~.cards>label>div>.notes-container2, #item-5:checked~.cards>label>div>.notes-container3, #item-5:checked~.cards>label>div>.notes-container4, #item-5:checked~.cards>label>div>.notes-container6, #item-5:checked~.cards>label>div>.notes-container7, #item-5:checked~.cards>label>div>.notes-container8, #item-5:checked~.cards>label>div>.notes-container9, #item-5:checked~.cards>label>div>.notes-container10, #item-5:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);      
+}
+#item-6:checked~.cards>label>div>.notes-container1, #item-6:checked~.cards>label>div>.notes-container2, #item-6:checked~.cards>label>div>.notes-container3, #item-6:checked~.cards>label>div>.notes-container4, #item-6:checked~.cards>label>div>.notes-container5, #item-6:checked~.cards>label>div>.notes-container7, #item-6:checked~.cards>label>div>.notes-container8, #item-6:checked~.cards>label>div>.notes-container9, #item-6:checked~.cards>label>div>.notes-container10, #item-6:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);      
+}
+#item-7:checked~.cards>label>div>.notes-container1, #item-7:checked~.cards>label>div>.notes-container2, #item-7:checked~.cards>label>div>.notes-container3, #item-7:checked~.cards>label>div>.notes-container4, #item-7:checked~.cards>label>div>.notes-container5, #item-7:checked~.cards>label>div>.notes-container6, #item-7:checked~.cards>label>div>.notes-container8, #item-7:checked~.cards>label>div>.notes-container9, #item-7:checked~.cards>label>div>.notes-container10, #item-7:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);      
+}
+#item-8:checked~.cards>label>div>.notes-container1, #item-8:checked~.cards>label>div>.notes-container2, #item-8:checked~.cards>label>div>.notes-container3, #item-8:checked~.cards>label>div>.notes-container4, #item-8:checked~.cards>label>div>.notes-container5, #item-8:checked~.cards>label>div>.notes-container6, #item-8:checked~.cards>label>div>.notes-container7, #item-8:checked~.cards>label>div>.notes-container9, #item-8:checked~.cards>label>div>.notes-container10, #item-8:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);      
+}
+#item-9:checked~.cards>label>div>.notes-container1, #item-9:checked~.cards>label>div>.notes-container2, #item-9:checked~.cards>label>div>.notes-container3, #item-9:checked~.cards>label>div>.notes-container4, #item-9:checked~.cards>label>div>.notes-container5, #item-9:checked~.cards>label>div>.notes-container6, #item-9:checked~.cards>label>div>.notes-container7, #item-9:checked~.cards>label>div>.notes-container8, #item-9:checked~.cards>label>div>.notes-container10, #item-9:checked~.cards>label>div>.notes-containerdoctor  {
+    display: none;
+    transform: scale(0);      
+}
+#item-10:checked~.cards>label>div>.notes-container1, #item-10:checked~.cards>label>div>.notes-container2, #item-10:checked~.cards>label>div>.notes-container3, #item-10:checked~.cards>label>div>.notes-container4, #item-10:checked~.cards>label>div>.notes-container5, #item-10:checked~.cards>label>div>.notes-container6, #item-10:checked~.cards>label>div>.notes-container7, #item-10:checked~.cards>label>div>.notes-container8, #item-10:checked~.cards>label>div>.notes-container9, #item-10:checked~.cards>label>div>.notes-containerdoctor {
+    display: none;
+    transform: scale(0);      
+}
+#item-doctor:checked~.cards>label>div>.notes-container1, #item-doctor:checked~.cards>label>div>.notes-container2, #item-doctor:checked~.cards>label>div>.notes-container3, #item-doctor:checked~.cards>label>div>.notes-container4, #item-doctor:checked~.cards>label>div>.notes-container5, #item-doctor:checked~.cards>label>div>.notes-container6, #item-doctor:checked~.cards>label>div>.notes-container7, #item-doctor:checked~.cards>label>div>.notes-container8, #item-doctor:checked~.cards>label>div>.notes-container9, #item-doctor:checked~.cards>label>div>.notes-container10 {
+    display: none;
+    transform: scale(0);      
+}
+
+.upload > img{
+  position: absolute;
+  height: 33px;
+  width: 33px;
+  top: 93%;
+  left: 32%;
+  z-index: 12;
+  cursor: pointer;
+}
