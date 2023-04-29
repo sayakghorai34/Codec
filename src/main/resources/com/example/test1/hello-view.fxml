@@ -14,19 +14,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="763.0" prefWidth="989.0" style="-fx-border-radius: 20; -fx-background-color: #43c6d8;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.secondController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="1012.0" style="-fx-border-radius: 20; -fx-background-color: #43c6d8;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.test1.secondController">
    <children>
       <ImageView fitHeight="326.0" fitWidth="348.0" layoutX="-56.0" layoutY="-63.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@logo.png" />
          </image>
       </ImageView>
-      <Button fx:id="Chatbttn" layoutX="839.0" layoutY="687.0" mnemonicParsing="false" onAction="#ChatAct" prefHeight="35.0" prefWidth="104.0" text="Go to Chats»" />
-      <Pane layoutX="203.0" layoutY="37.0" prefHeight="627.0" prefWidth="707.0" style="-fx-background-color: white; -fx-border-radius: 20;">
+      <Pane layoutX="212.0" layoutY="49.0" prefHeight="709.0" prefWidth="766.0" style="-fx-background-color: white; -fx-border-radius: 20;">
          <children>
-            <LineChart fx:id="TempChart" layoutY="29.0" prefHeight="195.0" prefWidth="706.0" title="Temperature: ">
+            <LineChart fx:id="TempChart" layoutY="1.0" prefHeight="215.0" prefWidth="766.0" title="Temperature: ">
                <xAxis>
-                  <CategoryAxis side="BOTTOM" fx:id="x3" />
+                  <CategoryAxis prefHeight="22.0" prefWidth="716.0" side="BOTTOM" fx:id="x3" />
                </xAxis>
                <yAxis>
                   <NumberAxis fx:id="y3" prefHeight="168.0" prefWidth="20.0" side="LEFT" />
@@ -35,7 +34,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </LineChart>
-            <LineChart fx:id="HRChart" horizontalZeroLineVisible="false" layoutX="1.0" layoutY="432.0" prefHeight="196.0" prefWidth="706.0" title="Heart Rate: ">
+            <LineChart fx:id="HRChart" horizontalZeroLineVisible="false" layoutX="1.0" layoutY="459.0" prefHeight="215.0" prefWidth="766.0" title="Heart Rate: ">
               <xAxis>
                 <CategoryAxis prefWidth="705.0" side="BOTTOM" fx:id="x1" />
               </xAxis>
@@ -43,57 +42,77 @@
                 <NumberAxis fx:id="y1" prefHeight="167.0" prefWidth="20.0" side="LEFT" />
               </yAxis>
             </LineChart>
-            <LineChart fx:id="SpO2Chart" layoutY="228.0" prefHeight="195.0" prefWidth="706.0" title="SpO2:              ">
+            <LineChart fx:id="SpO2Chart" layoutX="-8.0" layoutY="229.0" prefHeight="215.0" prefWidth="766.0" title="SpO2:              ">
               <xAxis>
-                <CategoryAxis side="BOTTOM" fx:id="x2" />
+                <CategoryAxis prefHeight="22.0" prefWidth="716.0" side="BOTTOM" fx:id="x2" />
               </xAxis>
               <yAxis>
                 <NumberAxis fx:id="y2" prefHeight="169.0" prefWidth="20.0" side="LEFT" />
               </yAxis>
             </LineChart>
-            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="297.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="299.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@temp.png" />
                </image>
             </ImageView>
-            <Label fx:id="TempLabel" layoutX="324.0" layoutY="7.0" prefHeight="40.0" prefWidth="50.0" text="  - -">
+            <Label fx:id="TempLabel" layoutX="435.0" layoutY="-2.0" prefHeight="40.0" prefWidth="50.0" text="  - -">
                <font>
                   <Font name="Bodoni 72 Book" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="351.0" layoutY="1.0" prefHeight="50.0" prefWidth="38.0" text="°F">
+            <Label layoutX="462.0" layoutY="-7.0" prefHeight="50.0" prefWidth="38.0" text="°F">
                <font>
                   <Font name="Bodoni 72 Book" size="20.0" />
                </font>
             </Label>
-            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="293.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="296.0" layoutY="229.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@Oxygen.png" />
                </image>
             </ImageView>
-            <Label fx:id="SpO2Label" layoutX="319.0" layoutY="201.0" prefHeight="40.0" prefWidth="50.0" text="  - -">
+            <Label fx:id="SpO2Label" layoutX="381.0" layoutY="225.0" prefHeight="40.0" prefWidth="50.0" text="  - -">
                <font>
                   <Font name="Bodoni 72 Book" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="345.0" layoutY="200.0" prefHeight="46.0" prefWidth="18.0" text="\%">
+            <Label layoutX="411.0" layoutY="222.0" prefHeight="46.0" prefWidth="18.0" text="\%">
                <font>
                   <Font name="Bodoni 72 Book" size="20.0" />
                </font>
             </Label>
-            <ImageView blendMode="DARKEN" fitHeight="27.0" fitWidth="27.0" layoutX="302.0" layoutY="410.0" pickOnBounds="true">
+            <ImageView blendMode="DARKEN" fitHeight="27.0" fitWidth="27.0" layoutX="308.0" layoutY="462.0" pickOnBounds="true">
                <image>
                   <Image url="@HR.png" />
                </image>
             </ImageView>
-            <Label fx:id="HRLabel" layoutX="329.0" layoutY="403.0" prefHeight="40.0" prefWidth="50.0" text="  - -">
+            <Label fx:id="HRLabel" layoutX="430.0" layoutY="455.0" prefHeight="40.0" prefWidth="50.0" text="  - -">
                <font>
                   <Font name="Bodoni 72 Book" size="20.0" />
                </font>
             </Label>
-            <Label layoutX="362.0" layoutY="408.0" prefHeight="33.0" prefWidth="53.0" text="bpm">
+            <Label layoutX="465.0" layoutY="460.0" prefHeight="33.0" prefWidth="53.0" text="bpm">
                <font>
                   <Font name="Bodoni 72 Book" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="201.0" layoutY="675.0" prefHeight="37.0" prefWidth="52.0" text="Age:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="AgeLabel" layoutX="244.0" layoutY="675.0" prefHeight="37.0" prefWidth="52.0" text="--">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="519.0" layoutY="675.0" prefHeight="37.0" prefWidth="52.0" text="Sex:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="SexLabel" layoutX="557.0" layoutY="675.0" prefHeight="37.0" prefWidth="100.0" text="--">
+               <font>
+                  <Font size="20.0" />
                </font>
             </Label>
          </children>
@@ -110,14 +129,6 @@
       </MenuButton>
       <DatePicker fx:id="Fromdatepicker" layoutX="25.0" layoutY="333.0" prefHeight="26.0" prefWidth="167.0" />
       <DatePicker fx:id="Todatepicker" layoutX="26.0" layoutY="390.0" prefHeight="26.0" prefWidth="167.0" />
-      <ImageView blendMode="MULTIPLY" fitHeight="53.0" fitWidth="45.0" layoutX="785.0" layoutY="683.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@Chat.jpg" />
-         </image>
-         <effect>
-            <ColorAdjust />
-         </effect>
-      </ImageView>
       <Label layoutX="25.0" layoutY="307.0" prefHeight="28.0" prefWidth="116.0" text="From Date:">
          <font>
             <Font size="18.0" />
@@ -129,25 +140,15 @@
          </font>
       </Label>
       <Button fx:id="SeeDetails" layoutX="58.0" layoutY="445.0" mnemonicParsing="false" onAction="#SeeDetailsAct" text="See Details»»" />
-      <Label layoutX="205.0" layoutY="678.0" prefHeight="37.0" prefWidth="52.0" text="Age:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label fx:id="AgeLabel" layoutX="248.0" layoutY="678.0" prefHeight="37.0" prefWidth="52.0" text="--">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="523.0" layoutY="678.0" prefHeight="37.0" prefWidth="52.0" text="Sex:">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label fx:id="SexLabel" layoutX="561.0" layoutY="678.0" prefHeight="37.0" prefWidth="100.0" text="--">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
+      <Button fx:id="Logout" blendMode="SRC_ATOP" layoutX="212.0" layoutY="775.0" mnemonicParsing="false" onAction="#LogOutAct" text="Log Out!" textFill="#ff4a4a" />
+      <ImageView blendMode="MULTIPLY" fitHeight="33.0" fitWidth="38.0" layoutX="845.0" layoutY="772.0" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Chat.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </ImageView>
+      <Button fx:id="Chatbttn" blendMode="MULTIPLY" layoutX="884.0" layoutY="775.0" mnemonicParsing="false" onAction="#ChatAct" prefHeight="26.0" prefWidth="94.0" text="Go to Chats»" />
    </children>
 </Pane>
